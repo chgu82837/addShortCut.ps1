@@ -46,7 +46,7 @@ Else {
         
 ForEach ($cp in $args){
     if (Test-Path $cp){
-        $target = (Reslove-Path $cp).Path
+        $target = (Resolve-Path $cp).Path
     }
     Else {
         $target = (Get-Command $cp).Source 2> $null
